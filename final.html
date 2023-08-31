@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Annotation and Marking App
+    </title>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form id="text-box-area" action="submit_final.php" method="post">
+        <div id="textInput">
+            <textarea style="display: none;" id="annotatedtext" name="annotatedtext"></textarea>
+        </div>
+        <div>
+            <button type="submit">Submit Annotation</button>
+        </div>
+    </form>
+
+    <div class="annotation-area">
+        <div class="functions">
+            <button onclick="highlightText()">Highlight</button>
+            <button onclick="clearFormatting()">Clear Formatting</button>
+            <div class="sub-skills">
+                <button onclick="clearSubSkillFormatting()">Clear Sub-Skill Formatting</button>
+                <button onclick="clearAllSubSkillFormatting()">Clear All Sub-Skill Formatting</button>
+
+                <button onclick="showGrading('Propositional Phrase')" data-subskill="Propositional Phrase">Propositional
+                    Phrase</button>
+                <button onclick="showGrading('Transition')" data-subskill="Transition">Transition</button>
+                <button onclick="showGrading('Proper Noun')" data-subskill="Proper Noun">Proper Noun</button>
+                <button onclick="showGrading('Sub Conjunction')" data-subskill="Sub Conjunction">Sub
+                    Conjunction</button>
+                <button onclick="showGrading('Pronoun')" data-subskill="Pronoun">Pronoun</button>
+
+                <div id="grading" style="display:none;">
+                    Grade:
+                    <select id="gradeValue">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button onclick="confirmGrade()">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
