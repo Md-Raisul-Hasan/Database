@@ -225,3 +225,8 @@ function unhighlightSelected(range, subSkillColor) {
     quill.formatText(range.index, range.length, 'background', subSkillColor);
     quill.formatText(range.index, range.length, 'underline', false);
 }
+
+function updateTextArea() {
+    var content = quill.root.innerHTML;
+    document.getElementById("annotatedtext").value = content;
+}
