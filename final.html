@@ -13,13 +13,14 @@
 
 <body>
     <form id="text-box-area" action="submit_final.php" method="post">
-        <div id="textInput">
-            <textarea style="display: none;" id="annotatedtext" name="annotatedtext"></textarea>
-        </div>
+        <div id="textInput"></div>
+        <textarea style="display: none;" id="annotatedtext" name="annotatedtext"></textarea>
         <div>
-            <button type="submit">Submit Annotation</button>
+            <button type="submit" onclick="updateTextArea()">Submit Annotation</button>
         </div>
     </form>
+    
+    
 
     <div class="annotation-area">
         <div class="functions">
